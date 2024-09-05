@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="Yummyapp.css">
+    <title>Yummy Application</title>
+    
+</head>
+<body>
+    <!-- page d'acceuil -->
+<div class="Accueil">
+    <nav class="navMenu">
+        <a class="nav" href="#section_home">Accueil</a>
+        <a class="nav" href="#section_Repas">Mes Repas</a>
+        <a class="nav" href="#section_Recettes">Mes Recettes</a>
+        <a class="nav">Profil</a>
+    </nav>
+    <div>
+    <h1 class="title">Yummy App</h1>
+    <h3>Votre assistant culinaire personnalisé</h3>
+    <p>Notre organisateur va vous permettre de preparer vos repas en avance ainsi qu’enregistrer vos recettes preferées</p>
+    <button class="btn1">Créer mon plan</button>
+    <button class="btn2">Ajoute recette</button>
+    </div>
+</div>
+<!-- page repas -->
+<div class="Repas">
+<div class="Semaine">    
+<div class="Lun">Lundi</div>
+    <div class="Mar">Mardi</div>
+    <div class="Mer">Mercredi</div>
+    <div class="Jeu">Jeudi</div>
+    <div class="Ven">Vendredi</div>
+    <div class="Sam">Samedi</div>
+    <div class="Dim">Dimanche</div>
+</div>
+</div>
+<!-- page recette -->
+    <form class="formRecette">
+        <input type="text" id="titre" placeholder="Nom recette" />
+        <textarea id="Recette" placeholder="détail recette..." rows="3"></textarea>
+        <button type="submit"><i class="fa-solid fa-plus"></i></button>
+    </form>
+    <div id="recetteContainer"></div>
+
+<script src="Yummyapp.js"></script>
+</body>
+</html>

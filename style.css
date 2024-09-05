@@ -1,0 +1,14 @@
+.Repas, .Recette{
+    background-image: url("backgroundimage.png");
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+opacity: 0.8;
+}
+
+.navMenu {
+    font-size: 16px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+}
