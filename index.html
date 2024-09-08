@@ -26,20 +26,42 @@
     </div>
 </div>
 <!-- page repas -->
+ <div class="Repas">
 <div class="Semaine">
-    <button>Lundi</button>    
-<div onclick="cardDay" class="btn">Lundi</div>
-<div onclick="cardDay" class="btn">Mardi</div>
-<div onclick="cardDay" class="btn">Mercredi</div>
-<div onclick="cardDay" class="btn">Jeudi</div>
-<div onclick="cardDay" class="btn">Vendredi</div>
-<div onclick="cardDay" class="btn">Samedi</div>
-<div onclick="cardDay" class="btn">Dimanche</div>
+    <button onclick="cardDay()" class="btn">Lundi</button> 
+    <button onclick="cardDay()" class="btn">Mardi</button> 
+    <button onclick="cardDay()" class="btn">Mercredi</button> 
+    <button onclick="cardDay()" class="btn">Jeudi</button> 
+    <button onclick="cardDay()" class="btn">Vendredi</button> 
+    <button onclick="cardDay()" class="btn">Samedi</button> 
+    <button onclick="cardDay()" class="btn">Dimanche</button>    
 </div>
-<div id="petitDejPlat">Petit Dejeuner</div>
-<div id="dejPlat">Dejeuner</div>
-<div id="dinerPlat">Diner</div>
-
+<div id="mealType" class="mealContainer">
+<div id="breakfastContainer" class="mealCard">
+   <h3>Petit Déjeuner</h3> 
+   <form class="formMeal">
+    <input type="text" id="mealName" placeholder="Nom du plat" />
+    <button type="submit"><i class="fa-solid fa-plus"></i></button>
+</form>
+<div id="divpetitDej"></div>
+</div>
+<div id="lunchContainer" class="mealCard">
+    <h3>Déjeuner</h3> 
+   <form class="formMeal">
+    <input type="text" id="mealName" placeholder="Nom du plat" />
+    <button type="submit"><i class="fa-solid fa-plus"></i></button>
+</form>
+<div id="divDej"></div>
+</div>
+<div id="dinnerContainer" class="mealCard">
+    <h3>Diner</h3> 
+   <form class="formMeal">
+    <input type="text" id="mealName" placeholder="Nom du plat" />
+    <button type="submit"><i class="fa-solid fa-plus"></i></button>
+</form>
+</div>
+</div>
+</div>
 <!-- page recette -->
     <form class="formRecette">
         <input type="text" id="titre" placeholder="Nom recette" />
