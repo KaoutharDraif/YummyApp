@@ -1,5 +1,5 @@
 .Repas, .Recette{
-    background-image: url("backgroundimage.png");
+    /* background-image: url("backgroundimage.png"); */
     background-repeat: no-repeat;
     padding: 50px 20px;
 opacity: 0.8;

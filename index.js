@@ -5,28 +5,74 @@ const recetteContainer = document.getElementById('recetteContainer');
 
 let recettes = [];
 
-formRecette.addEventListener('submit', function(event){
+formRecette.addEventListener('submit', function (event) {
     event.preventDefault();
     addRecette();
 })
 
-function addRecette(){
+function addRecette() {
     const recetteTitre = Plat.value.trim();
-    console.log(recetteTitre);
     const recetteDétail = Détails.value.trim();
-    if (recetteTitre === '' && recetteDétail ==='') return;
-    recettes.push({titre: recetteTitre, détail: recetteDétail}); 
+    if (recetteTitre === '' && recetteDétail === '') return;
+    recettes.push({ titre: recetteTitre, détail: recetteDétail });
     displayRecettes();
-    console.log(recettes);
-Plat.value ='';
-Détails.value ='';
+    Plat.value = '';
+    Détails.value = '';
 }
 
-function displayRecettes(){
-    recetteContainer.innerHTML ='';
-    recettes.forEach((recette, index) =>{
-const recetteElement = document.createElement('div');
-recetteElement.textContent = recette.text;
-recetteContainer.appendChild(recetteElement);
- })
+
+function displayRecettes() {
+    recetteContainer.innerHTML = '';
+    recettes.forEach((recette, index) => { 
+        const recetteElement = document.createElement('div'); //creates a new div element to display the recipe on the webpage
+        
+
+        const Recipe = document.createElement('h3');
+        Recipe.textContent = recette.titre;
+        recetteElement.appendChild(Recipe);
+
+        const ingredients = document.createElement('p');
+        ingredients.textContent = recette.détail;
+        recetteElement.appendChild(ingredients);
+
+        const editButton = document.createElement('button');
+        editButton.innerHTML = '<i class="fa-solid fa-pen-to-square"></i>';
+        editButton.addEventListener('click', () => {
+            editRecipe(index);
+
+        });
+
+        // const deleteButton = document.createElement('button');
+        // deleteButton.innerHTML = '<i class="fa-solid fa-trash"></i>';
+        // deleteButton.addEventListener('click', () => {
+        //     deleteRecipe(index);
+        // });
+
+        recetteContainer.appendChild(recetteElement);
+        recetteContainer.appendChild(editButton);
+        // recetteContainer.appendChild(deleteRecipe);
+    })
 }
+
+function editRecipe(index) {
+    const newtitleRecipe = prompt('Modifie le titre de la recette:', recettes[index].titre);
+    if (newtitleRecipe !== null && newtitleRecipe !== '') {
+        recettes[index].titre = newtitleRecipe;
+        displayRecettes(); 
+    }
+    const newRecipe = prompt('Modifie votre recette:', recettes[index].détail);
+    if (newRecipe !== null && newRecipe !== '') {
+        recettes[index].détail = newRecipe;
+        displayRecettes(); 
+    }
+}
+
+
+
+
+
+
+
+
+
+
