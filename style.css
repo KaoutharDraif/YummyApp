@@ -3,6 +3,15 @@
     justify-content: space-between;
     } */
 
+.pageAccueil,
+.pageRepas,
+.pageRecette {
+    background-image: url("backgroundimage.png");
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+    opacity: 0.8;
+}
+
 .mealContainer {
     display: flex;
     flex-direction: column;
@@ -10,10 +19,10 @@
 }
 
 .mealCard {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 40%;
-  background-color: #EEE2DC;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 40%;
+    background-color: #EEE2DC;
 }
 
 .btn {
@@ -22,12 +31,6 @@
     width: 20%;
 }
 
-.Repas, .Recette{
-    /* background-image: url("backgroundimage.png"); */
-    background-repeat: no-repeat;
-    padding: 50px 20px;
-opacity: 0.8;
-}
 
 .navMenu {
     display: flex;
@@ -41,4 +44,15 @@ opacity: 0.8;
 .Semaine {
     display: flex;
     flex-direction: column;
+    width: 30%;
 }
+
+.pageRepas{
+    display: flex;
+    /* justify-content: space-between; */
+    flex-direction: row;
+    text-align: center;
+}
+
+#mealType {
+text-align: left;}

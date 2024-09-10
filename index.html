@@ -9,7 +9,7 @@
 </head>
 <body>
     <!-- page d'acceuil -->
-<div class="Accueil">
+<div class="pageAccueil">
     <nav class="navMenu">
         <img src="YummyApp logo.jpeg" alt="YummyLogo" style="width: 55px;height: 55px;">
         <a class="nav" href="#section_home">Accueil</a>
@@ -26,7 +26,7 @@
     </div>
 </div>
 <!-- page repas -->
- <div class="Repas">
+ <div class="pageRepas">
 <div class="Semaine">
     <button onclick="cardDay()" class="btn">Lundi</button> 
     <button onclick="cardDay()" class="btn">Mardi</button> 
@@ -36,42 +36,44 @@
     <button onclick="cardDay()" class="btn">Samedi</button> 
     <button onclick="cardDay()" class="btn">Dimanche</button>    
 </div>
-<!-- <div id="mealType" class="mealContainer">
-<div id="breakfastContainer" class="mealCard">
+<!-- We can use the contenteditable="true" -->
+<div id="mealType">
+<div id="breakfastContainer">
    <h3>Petit Déjeuner</h3> 
    <form class="formMeal">
-    <input type="text" id="mealName" placeholder="Nom du plat" />
+    <input type="text" id="mealNameBreakfast" placeholder="Nom du plat" />
     <button type="submit"><i class="fa-solid fa-plus"></i></button>
 </form>
 <div id="divpetitDej"></div>
 </div>
-<div id="lunchContainer" class="mealCard">
+<div id="lunchContainer">
     <h3>Déjeuner</h3> 
    <form class="formMeal">
-    <input type="text" id="mealName" placeholder="Nom du plat" />
+    <input type="text" id="mealNamelunch" placeholder="Nom du plat" />
     <button type="submit"><i class="fa-solid fa-plus"></i></button>
 </form>
 <div id="divDej"></div>
 </div>
-<div id="dinnerContainer" class="mealCard">
+<div id="dinnerContainer">
     <h3>Diner</h3> 
    <form class="formMeal">
-    <input type="text" id="mealName" placeholder="Nom du plat" />
+    <input type="text" id="mealNameDinner" placeholder="Nom du plat" />
     <button type="submit"><i class="fa-solid fa-plus"></i></button>
 </form>
 <div id="divdiner"></div>
 </div>
 </div>
-</div> -->
+</div>
 
 <!-- page recette -->
-    <form class="formRecette">
+<div class="pageRecette">
+    <form id="formRecette">
         <input type="text" id="titre" placeholder="Nom recette" />
         <textarea id="Recette" placeholder="détail recette..." rows="3"></textarea>
         <button type="submit"><i class="fa-solid fa-plus"></i></button>
     </form>
     <div id="recetteContainer"></div>
-
+</div>
 <script src="repas.js"></script>
 <script src="Recette.js"></script>
 </body>

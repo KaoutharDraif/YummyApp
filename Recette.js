@@ -1,11 +1,11 @@
-const formRecette = document.querySelector('form');
+const formRecette = document.getElementById('formRecette');
 const Plat = document.getElementById('titre');
 const Détails = document.getElementById('Recette');
 const recetteContainer = document.getElementById('recetteContainer');
 
  
 
-let recettes = [];
+let recettes = JSON.parse(localStorage.getItem('recettes')) || [];
 
 formRecette.addEventListener('submit', function (event) {
     event.preventDefault();
@@ -18,6 +18,7 @@ function addRecette() {
     if (recetteTitre === '' && recetteDétail === '') return;
     recettes.push({ titre: recetteTitre, détail: recetteDétail });
     displayRecettes();
+    saverecettes();
     Plat.value = '';
     Détails.value = '';
 }
@@ -63,22 +64,27 @@ function editRecipe(index) {
     if (newtitleRecipe !== null && newtitleRecipe !== '') {
         recettes[index].titre = newtitleRecipe;
         displayRecettes();
+        saverecettes();
     }
     // To edit the recipe's details
     const newRecipe = prompt('Modifie votre recette:', recettes[index].détail);
     if (newRecipe !== null && newRecipe !== '') {
         recettes[index].détail = newRecipe;
         displayRecettes();
+        saverecettes();
     }
 }
 
 function deleteRecipe(index) {
     recettes.splice(index, 1);
     displayRecettes();
+    saverecettes();
 }
 
-
-
+function saverecettes() {
+    localStorage.setItem('recettes', JSON.stringify(recettes));
+}
+displayRecettes();
 
 
 
